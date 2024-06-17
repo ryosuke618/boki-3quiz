@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簿記勘定科目クイズ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .options button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+        .result, .description {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>簿記勘定科目クイズ</h1>
+        <div class="question" id="question">ここに勘定科目が表示されます</div>
+        <div class="options">
+            <button onclick="checkAnswer('資産')">資産</button>
+            <button onclick="checkAnswer('負債')">負債</button>
+            <button onclick="checkAnswer('資本')">資本</button>
+            <button onclick="checkAnswer('収益')">収益</button>
+            <button onclick="checkAnswer('費用')">費用</button>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="description" id="description"></div>
+        <button onclick="nextQuestion()">次の問題へ</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
